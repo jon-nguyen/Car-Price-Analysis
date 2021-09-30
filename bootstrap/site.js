@@ -1,3 +1,6 @@
+
+
+
 function findFinalPrice() {
     let currentprice = document.getElementById("currentprice").value;
     let taxpercent = document.getElementById("taxpercent").value;
@@ -16,11 +19,13 @@ function findFinalPrice() {
 function findFinalMaintainencePrice() {
     let interval = document.getElementById("Service Interval").value;
     let cost = document.getElementById("costservice").value;
+    if (document.getElementById("tax").value!==''){
+        cost = cost * (1+ (document.getElementById("tax").value/100));
+    }
     let current = document.getElementById("miles").value;
     let ending = document.getElementById("endmiles").value;
     let numServices = (parseInt(ending) - parseInt(current)) / parseInt(interval);
     let finalcost = numServices * parseInt(cost);
-
     document.getElementById("final cost").innerHTML = finalcost;
     document.getElementById("services").innerHTML = numServices;
 }
@@ -29,7 +34,9 @@ function findGasPrice() {
     let gallons = document.getElementById("gallonsofgas").value;
     let cost = document.getElementById("costpergallonofgas").value;
     let total = parseInt(gallons) * parseInt(cost);
-
+    if (document.getElementById("tax").value!==''){
+        total = total * (1+ (document.getElementById("tax").value/100));
+    }
     document.getElementById("finalcost").innerHTML = total;
 }
 

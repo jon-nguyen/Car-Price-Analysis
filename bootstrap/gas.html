@@ -22,8 +22,8 @@
                 <a class="navbar-brand" href="#">Honda: Car Price Analysis</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="index.html">Final Price Calculation</a></li>
-                <li><a href="#">Maintainence</a></li>
+                <li><a href="index.html">Final Price</a></li>
+                <li><a href="maintainence.html">Maintainence</a></li>
                 <li><a href="depreciation.html">Depreciation</a></li>
                 <li class ="active"><a href="gas.html">Gas</a></li>
             </ul>
@@ -32,14 +32,22 @@
     <div class="container text-center">
         <div class="jumbotron">
             <div class="container">
-                <h2> Gas Calculator </h2>
+                <h2> Gas Price Calculator </h2>
                 <p> Figure out how much gas costs or compare gas prices for your vehicle.</p>
             </div>
         </div>
     </div>
-
     <br>
     <form class="gaspricecalculator">
+        <div class="container">
+            <div class="form-group">
+                <label class=".control-label">Calculate:</label>
+                <select name="model" id="model">
+                    <option value="TGP"> Total Gas Price </option>
+                    <option value="CTGP">Compare Total Gas Prices</option>
+                </select>
+            </div>
+        </div>
         <div class="container">
             <label class=".control-label">Gallons of Gas</label>
             <input class="form-control" id="gallonsofgas" type="text" placeholder="Type Gallons of Gas"></input>
@@ -47,6 +55,10 @@
         <div class="container">
             <label class=".control-label">Cost per Gallon of Gas:</label>
             <input class="form-control" id="costpergallonofgas" type="text" placeholder="Type Cost per Gallon of Gas"></input>
+        </div>
+        <div class="container">
+            <label class=".control-label">Tax % (Optional):</label>
+            <input class="form-control" id="tax" type="text" placeholder="Type Tax %"></input>
         </div>
     </form>
 
