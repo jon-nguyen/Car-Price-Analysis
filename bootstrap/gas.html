@@ -23,59 +23,45 @@
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Final Price Calculation</a></li>
-                <li class="active"><a href="#">Maintainence</a></li>
+                <li><a href="#">Maintainence</a></li>
                 <li><a href="depreciation.html">Depreciation</a></li>
-                <li><a href="gas.html">Gas</a></li>
+                <li class ="active"><a href="gas.html">Gas</a></li>
             </ul>
         </div>
     </nav>
     <div class="container text-center">
         <div class="jumbotron">
             <div class="container">
-                <h2> Maintaince Calculator </h2>
-                <p> Figure out how much a service costs between mileages.</p>
+                <h2> Gas Calculator </h2>
+                <p> Figure out how much gas costs or compare gas prices for your vehicle.</p>
             </div>
         </div>
     </div>
-    <div class="container text-center">
-        <img src="images\Honda Maintainence.png" alt="Honda Maintainence ">
-    </div>
 
     <br>
-    <form class="finalmaintainenceprice">
+    <form class="gaspricecalculator">
         <div class="container">
-            <label class=".control-label">Service Interval Miles:</label>
-            <input class="form-control" id="Service Interval" type="text" placeholder="Type Miles"></input>
+            <label class=".control-label">Gallons of Gas</label>
+            <input class="form-control" id="gallonsofgas" type="text" placeholder="Type Gallons of Gas"></input>
         </div>
         <div class="container">
-            <label class=".control-label">Cost per Service:</label>
-            <input class="form-control" id="costservice" type="text" placeholder="Type Cost"></input>
-        </div>
-        <div class="container">
-            <label class=".control-label">Current Miles:</label>
-            <input class="form-control" id="miles" type="text" placeholder="Type Current Miles"></input>
-        </div>
-        <div class="container">
-            <label class=".control-label">Ending Miles:</label>
-            <input class="form-control" id="endmiles" type="text" placeholder="Type Ending Miles"></input>
+            <label class=".control-label">Cost per Gallon of Gas:</label>
+            <input class="form-control" id="costpergallonofgas" type="text" placeholder="Type Cost per Gallon of Gas"></input>
         </div>
     </form>
 
     <br>
     <div class=" col text-center">
         <div class="container">
-            <button class="btn btn-primary btn-lg" form="finalmaintainenceprice" type="button" onclick="findFinalMaintainencePrice()">Find Total Cost</button>
+<!--            <button class="btn btn-primary btn-lg" form="finalmaintainenceprice" type="button" onclick="findFinalMaintainencePrice()">Find Total Cost</button>-->
+                <button class="btn btn-primary btn-lg" form="findgasprice" type="button" onclick="findGasPrice()">Find Total Cost</button>
         </div>
     </div>
     <br>
     <div class="container">
         <div class="jumbotron">
-
-            <h3>Number of Services:</h3>
-            <p id="services"></p>
-            <br>
             <h3>Final Cost:</h3>
-            <p id="final cost"></p>
+            <p id="finalcost"></p>
         </div>
     </div>
 
